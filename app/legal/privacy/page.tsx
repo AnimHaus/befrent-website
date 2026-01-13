@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
             className="space-y-4"
           >
             <h1 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none">
-              Data <br /><span className="text-white/20">Governance</span>
+              Privacy <br /><span className="text-white/20">Policy</span>
             </h1>
             <p className="text-neutral-500 max-w-2xl text-xs font-bold uppercase tracking-widest leading-relaxed mt-4">
               Effective Date: January 2026. This document outlines the rigorous data requirements necessary for high-stakes commitment dating. Your privacy is protected by encryption; your safety is enforced by telemetry.
@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
           whileInView={{ opacity: 1 }}
           className="mt-32 p-12 rounded-[2.5rem] bg-white/[0.01] border border-white/5 text-center space-y-8"
         >
-          <h3 className="text-3xl font-black uppercase italic tracking-tighter max-w-xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-black uppercase italic tracking-tighter max-w-xl mx-auto">
             By accessing the Veil network, you acknowledge the absolute nature of these protocols.
           </h3>
           <p className="text-neutral-500 text-xs font-bold uppercase tracking-widest max-w-2xl mx-auto leading-loose">
