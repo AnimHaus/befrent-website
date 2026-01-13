@@ -4,10 +4,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
-  CalendarCheck,
-  CreditCard,
-  Heart,
-  ShieldCheck,
   Venus,
   Mars,
   ChevronRight,
@@ -78,11 +74,23 @@ export default function HowItWorksPage() {
       </section>
 
       {/* SPLIT HOVER SECTION */}
-      <section className="relative h-[90vh] min-h-[700px] bg-black overflow-hidden select-none">
-        <motion.div animate={{ clipPath: womenClipPath }} transition={{ type: "spring", stiffness: 150, damping: 25 }} className="absolute inset-0 bg-gradient-to-br from-[#FF4D9D] to-[#7B3FE4] z-20 cursor-pointer" onMouseEnter={() => setHoveredSide('women')} onMouseLeave={() => setHoveredSide(null)}>
+      <section className="relative h-auto lg:h-[90vh] min-h-[700px] bg-black overflow-hidden select-none flex flex-col lg:block">
+        
+        {/* FOR WOMEN PANEL */}
+        <motion.div 
+          // Clip path only applies to desktop (lg+)
+          style={{ clipPath: typeof window !== 'undefined' && window.innerWidth >= 1024 ? womenClipPath : 'none' }}
+          animate={typeof window !== 'undefined' && window.innerWidth >= 1024 ? { clipPath: womenClipPath } : {}}
+          transition={{ type: "spring", stiffness: 150, damping: 25 }} 
+          className="relative lg:absolute inset-0 bg-gradient-to-br from-[#FF4D9D] to-[#7B3FE4] z-20 cursor-pointer py-16 lg:py-0" 
+          onMouseEnter={() => setHoveredSide('women')} 
+          onMouseLeave={() => setHoveredSide(null)}
+          onClick={() => setHoveredSide(hoveredSide === 'women' ? null : 'women')}
+        >
           <div className="h-full flex flex-col justify-center px-8 md:px-24">
             <AnimatePresence mode="wait">
-              {hoveredSide !== 'men' ? (
+              {/* On Mobile, we show content always, or when selected */}
+              {(hoveredSide !== 'men') ? (
                 <motion.div key="women-content" initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} className="max-w-md space-y-8">
                   <SectionTitle icon={<Venus />} title="For Women" subtitle="You choose. You decide when." light />
                   <div className="grid gap-4 w-full max-w-md">
@@ -101,12 +109,21 @@ export default function HowItWorksPage() {
           </div>
         </motion.div>
 
-        <motion.div animate={{ clipPath: menClipPath }} transition={{ type: "spring", stiffness: 150, damping: 25 }} className="absolute inset-0 bg-gradient-to-br from-[#3EC5FF] to-[#1E40AF] z-10 cursor-pointer" onMouseEnter={() => setHoveredSide('men')} onMouseLeave={() => setHoveredSide(null)}>
-          <div className="h-full flex flex-col justify-center items-end px-8 md:px-24">
+        {/* FOR MEN PANEL */}
+        <motion.div 
+          style={{ clipPath: typeof window !== 'undefined' && window.innerWidth >= 1024 ? menClipPath : 'none' }}
+          animate={typeof window !== 'undefined' && window.innerWidth >= 1024 ? { clipPath: menClipPath } : {}}
+          transition={{ type: "spring", stiffness: 150, damping: 25 }} 
+          className="relative lg:absolute inset-0 bg-gradient-to-br from-[#3EC5FF] to-[#1E40AF] z-10 cursor-pointer py-16 lg:py-0" 
+          onMouseEnter={() => setHoveredSide('men')} 
+          onMouseLeave={() => setHoveredSide(null)}
+          onClick={() => setHoveredSide(hoveredSide === 'men' ? null : 'men')}
+        >
+          <div className="h-full flex flex-col justify-center items-start lg:items-end px-8 md:px-24">
             <AnimatePresence mode="wait">
-              {hoveredSide !== 'women' ? (
-                <motion.div key="men-content" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 50 }} className="max-w-md space-y-8 text-right flex flex-col items-end">
-                  <SectionTitle icon={<Mars />} title="For Men" subtitle="Your time is valued and compensated." light align="right" />
+              {(hoveredSide !== 'women') ? (
+                <motion.div key="men-content" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 50 }} className="max-w-md space-y-8 text-left lg:text-right flex flex-col items-start lg:items-end">
+                  <SectionTitle icon={<Mars />} title="For Men" subtitle="Your time is valued and compensated." light align="left" className="lg:text-right" />
                   <div className="grid gap-4 w-full max-w-md">
                     <InteractiveCard icon={<FontAwesomeIcon icon={faCalendarDays} />} title="Set Availability" description="Choose your own hours. Your time is your currency." color="#3EC5FF" />
                     <InteractiveCard icon={<FontAwesomeIcon icon={faMoneyBillWave} />} title="Hourly Rate" description="Set your value within platform limits. Get paid to date." color="#3EC5FF" />
@@ -199,7 +216,7 @@ export default function HowItWorksPage() {
 
       {/* CTA */}
       <section className="px-6 py-32 bg-gradient-to-tr from-[#FF8A3D] via-[#FF4D9D] to-[#7B3FE4] text-white text-center">
-        <motion.h2 initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className="text-7xl font-black uppercase italic leading-[0.8] mb-10">
+        <motion.h2 initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className="text-5xl sm:text-7xl font-black uppercase italic leading-[0.8] mb-10">
           No Chat.<br />No Games.<br /><span className="opacity-30">Just Dates.</span>
         </motion.h2>
         <Button size="lg" className="h-16 px-12 bg-black text-white rounded-full text-xl font-bold hover:scale-110 transition-transform">
