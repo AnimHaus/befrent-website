@@ -55,7 +55,7 @@ export default function Footer() {
             {/* UPDATED SOCIALS: Removed TikTok, Swapped Twitter for X */}
             <motion.div variants={itemVariants} className="flex gap-4">
                <SocialLink icon={faInstagram} href="#" color="#E4405F" />
-               <SocialLink icon={faXTwitter} href="#" color="#000000" />
+               <SocialLink icon={faXTwitter} href="#" color="#ffffff" />
             </motion.div>
           </div>
 
@@ -105,16 +105,34 @@ export default function Footer() {
 
 /* ---------------- COMPONENTS ---------------- */
 
-function SocialLink({ icon, href, color }: { icon: any, href: string, color: string }) {
-    return (
-        <motion.a
-            href={href}
-            whileHover={{ scale: 1.1, backgroundColor: color, borderColor: color }}
-            className="h-10 w-10 rounded-xl border border-white/10 flex items-center justify-center text-white transition-colors cursor-pointer bg-white/5"
-        >
-            <FontAwesomeIcon icon={icon} className="text-md" />
-        </motion.a>
-    );
+function SocialLink({
+  icon,
+  href,
+  color,
+}: {
+  icon: any;
+  href: string;
+  color: string;
+}) {
+  const isTwitter = icon === faXTwitter;
+
+  return (
+    <motion.a
+      href={href}
+      whileHover={{
+        scale: 1.1,
+        backgroundColor: color,
+        borderColor: color,
+      }}
+      className="h-10 w-10 rounded-xl border border-white/10 flex items-center justify-center cursor-pointer bg-white/5"
+    >
+      <motion.div
+        whileHover={{ color: isTwitter ? "#000000" : "#ffffff" }}
+      >
+        <FontAwesomeIcon icon={icon} className="text-md" />
+      </motion.div>
+    </motion.a>
+  );
 }
 
 function TrustBadge({ icon, title, text }: { icon: React.ReactNode, title: string, text: string }) {
