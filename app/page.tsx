@@ -81,14 +81,17 @@ function HeroSection() {
           <Button
             variant="ghost"
             className="text-white/60 hover:text-white text-lg group"
+            asChild
           >
-            See how it works 
-            <motion.div
-              animate={{ y: [0, 5, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
-            >
-              <ArrowDown className="ml-2 h-5 w-5" />
-            </motion.div>
+            <a href="#how-it-works" className="flex items-center">
+              See how it works
+              <motion.div
+                animate={{ y: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+              >
+                <ArrowDown className="ml-2 h-5 w-5" />
+              </motion.div>
+            </a>
           </Button>
         </motion.div>
       </motion.div>
@@ -106,13 +109,13 @@ function ProofSection() {
            style={{ backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center sm:items-end mb-16 gap-6">
           <div className="space-y-2">
-            <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter text-white">
+            <h2 className="text-4xl md:text-6xl font-black text-center sm:text-left uppercase italic tracking-tighter text-white">
               Built for <span className="text-neutral-500">Trust.</span>
             </h2>
           </div>
-          <p className="text-neutral-500 max-w-xs text-sm font-medium leading-relaxed">
+          <p className="text-neutral-500 max-w-xs text-sm font-medium leading-relaxed text-center sm:text-left">
             We removed the friction of traditional apps to focus on physical safety and time value.
           </p>
         </div>
@@ -192,7 +195,7 @@ function ProofCard({ icon, title, desc, color, index }: any) {
 
 function HowItWorksTeaser() {
   return (
-    <section className="bg-[#050505] py-32 px-6 relative overflow-hidden border-t border-white/5">
+    <section id="how-it-works" className="bg-[#050505] py-32 px-6 relative overflow-hidden border-t border-white/5">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#7B3FE4]/20 via-transparent to-transparent" />
@@ -315,7 +318,7 @@ function ProtocolStep({ side, number, title, desc, color, label }: any) {
 function FinalCTA() {
   return (
     <section className="px-6 py-32 bg-gradient-to-tr from-[#FF8A3D] via-[#FF4D9D] to-[#7B3FE4] text-white text-center">
-      <motion.h2 initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className="text-7xl font-black uppercase italic leading-[0.8] mb-10">
+      <motion.h2 initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className="text-5xl sm:text-7xl font-black uppercase italic leading-[0.8] mb-10">
         No Chat.<br />No Games.<br /><span className="opacity-30">Just Dates.</span>
       </motion.h2>
       <Button size="lg" className="h-16 px-12 bg-black text-white rounded-full text-xl font-bold hover:scale-110 transition-transform">
