@@ -44,7 +44,7 @@ export default function DownloadPage() {
           </div>
 
           {/* STORE BADGES */}
-          <div className="flex flex-wrap gap-4 items-center">
+          <div className="flex flex-wrap gap-2 sm:gap-4 items-center">
             <motion.a 
               href="#" 
               whileHover={{ scale: 1.05 }} 
