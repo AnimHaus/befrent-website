@@ -5,11 +5,10 @@ import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   ShieldAlert,
-  Lock,
-  Zap,
-  Clock,
   CircleDollarSign,
 } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock, faClock, faBolt } from "@fortawesome/free-solid-svg-icons";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -54,21 +53,21 @@ export default function PaymentPolicy() {
 
       {/* CORE RULES GRID */}
       <section className="px-6 py-20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-1">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-1">
           <PolicyCard 
-            icon={<Lock />} 
+            icon={<FontAwesomeIcon icon={faLock} />} 
             title="The Escrow Lock" 
             content="When a date is scheduled, the first hour payment is locked immediately. This ensures the host's time is reserved and the guest is committed."
             color="#7B3FE4"
           />
           <PolicyCard 
-            icon={<Clock />} 
+            icon={<FontAwesomeIcon icon={faClock} />} 
             title="No-Show Penalty" 
             content="If a guest fails to arrive within 60 minutes of the scheduled time, the locked funds are automatically transferred to the host."
             color="#FF4D9D"
           />
           <PolicyCard 
-            icon={<Zap />} 
+            icon={<FontAwesomeIcon icon={faBolt} />} 
             title="Instant Payouts" 
             content="Once verification is complete, host funds are released to the internal wallet. Withdrawals are processed within 24 hours."
             color="#3EC5FF"
