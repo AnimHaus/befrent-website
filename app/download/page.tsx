@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { 
+import {
   QrCode,
   Activity,
   Heart,
@@ -21,9 +21,9 @@ export default function DownloadPage() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
+
         {/* LEFT COLUMN: THE HOOK */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -38,37 +38,37 @@ export default function DownloadPage() {
               Get the <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF4D9D] to-[#7B3FE4]">&nbsp;App&nbsp;</span>
             </h1>
             <p className="max-w-md text-lg text-white/50 italic font-medium leading-tight border-l-2 border-white/10 pl-6">
-              A specialized interface for every user. <br /> 
-              Soft elegance for her. Tactical precision for him. 
+              A specialized interface for every user. <br />
+              Soft elegance for her. Tactical precision for him.
             </p>
           </div>
 
           {/* STORE BADGES */}
           <div className="flex flex-wrap gap-2 sm:gap-4 items-center">
-            <motion.a 
-              href="#" 
-              whileHover={{ scale: 1.05 }} 
+            <motion.a
+              href="#"
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="relative block w-40 transition-opacity hover:opacity-80"
             >
-              <Image 
-                src="/images/apple-store.webp" 
-                alt="Download on App Store" 
-                width={300} 
+              <Image
+                src="https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/apple-store.webp"
+                alt="Download on App Store"
+                width={300}
                 height={100}
                 className="w-full h-auto"
               />
             </motion.a>
-            <motion.a 
-              href="#" 
-              whileHover={{ scale: 1.05 }} 
+            <motion.a
+              href="#"
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="relative block w-53 transition-opacity hover:opacity-80"
             >
-              <Image 
-                src="/images/app-store.webp" 
-                alt="Get it on Google Play" 
-                width={300} 
+              <Image
+                src="https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/app-store.webp"
+                alt="Get it on Google Play"
+                width={300}
                 height={100}
                 className="w-full h-auto"
               />
@@ -77,7 +77,7 @@ export default function DownloadPage() {
         </motion.div>
 
         {/* RIGHT COLUMN: THE VISUAL (IPHONE DYNAMIC ISLAND STYLE) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -85,12 +85,12 @@ export default function DownloadPage() {
         >
           {/* SOFT PINK GLOW */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-[500px] bg-[#FF4D9D] blur-[120px] opacity-30 rotate-12" />
-          
+
           <div className="relative w-[280px] h-[580px] bg-[#FDFCFD] rounded-[3.5rem] border-[10px] border-[#1a1a1a] shadow-[0_40px_100px_rgba(255,77,157,0.2)] overflow-hidden ring-2 ring-white/5">
-            
+
             {/* DYNAMIC ISLAND */}
             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-50 flex items-center justify-between px-3">
-               <div className="w-8 h-1 bg-white/10 rounded-full" />
+              <div className="w-8 h-1 bg-white/10 rounded-full" />
             </div>
 
             {/* LIGHT MODE APP UI */}
@@ -98,22 +98,22 @@ export default function DownloadPage() {
               {/* HEADER AREA */}
               <div className="p-6 pt-16 flex justify-between items-center">
                 <div className="space-y-0.5">
-                   <h2 className="text-xl font-black italic text-black uppercase tracking-tighter leading-none">Veil App</h2>
+                  <h2 className="text-xl font-black italic text-black uppercase tracking-tighter leading-none">Veil App</h2>
                 </div>
                 <div className="w-10 h-10 rounded-2xl bg-neutral-100 flex items-center justify-center border border-neutral-200 shadow-sm">
-                   <Lock size={16} className="text-neutral-400" />
+                  <Lock size={16} className="text-neutral-400" />
                 </div>
               </div>
 
               {/* MAIN PROFILE VIEW */}
               <div className="px-6 flex-1">
                 <div className="w-full h-[300px] rounded-[2.5rem] bg-neutral-100 relative overflow-hidden shadow-inner group">
-                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                   {/* This represents the girl's view of a reserved guy */}
-                   <div className="absolute bottom-6 left-6 text-white">
-                      <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">Upcoming Date</p>
-                      <h4 className="text-3xl font-black italic uppercase tracking-tight leading-none">James, 27</h4>
-                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  {/* This represents the girl's view of a reserved guy */}
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">Upcoming Date</p>
+                    <h4 className="text-3xl font-black italic uppercase tracking-tight leading-none">James, 27</h4>
+                  </div>
                 </div>
 
                 {/* SCHEDULE HUD */}
@@ -133,15 +133,15 @@ export default function DownloadPage() {
 
               {/* BOTTOM ACTIONS */}
               <div className="p-6 pb-12">
-                 <button className="w-full h-16 bg-black text-white rounded-[2rem] font-black uppercase italic text-xs tracking-widest shadow-2xl active:scale-95 transition-all flex items-center justify-center gap-3">
-                    Verify My Arrival
-                 </button>
+                <button className="w-full h-16 bg-black text-white rounded-[2rem] font-black uppercase italic text-xs tracking-widest shadow-2xl active:scale-95 transition-all flex items-center justify-center gap-3">
+                  Verify My Arrival
+                </button>
               </div>
             </div>
           </div>
 
           {/* QR CODE FLOATER */}
-          <motion.div 
+          <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             className="absolute -bottom-6 -left-6 md:left-12 p-5 bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] hidden sm:block"

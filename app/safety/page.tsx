@@ -1,14 +1,14 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { 
-  MapPin, 
-  Camera, 
-  PhoneCall, 
-  Siren, 
-  Scale, 
-  Clock, 
-  Lock 
+import {
+  MapPin,
+  Camera,
+  PhoneCall,
+  Siren,
+  Scale,
+  Clock,
+  Lock
 } from "lucide-react";
 
 const PROTOCOLS = [
@@ -18,7 +18,7 @@ const PROTOCOLS = [
     description: "Financial fairness is enforced by GPS telemetry. For a man to claim a 'No-Show' security deposit, the system must verify his presence within a 25-meter radius of the meeting pin. No presence, no payout. Zero exceptions.",
     icon: <MapPin className="text-[#3EC5FF]" size={32} />,
     color: "border-[#3EC5FF]",
-    image: "/images/geofence-map.png" 
+    srcset: "https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/cyberpunk-location-tracking-mobile-device/cyberpunk-location-tracking-mobile-device.avif 1x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/cyberpunk-location-tracking-mobile-device/cyberpunk-location-tracking-mobile-device.webp 2x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/cyberpunk-location-tracking-mobile-device/cyberpunk-location-tracking-mobile-device.jpg 3x"
   },
   {
     title: "Identity Verification",
@@ -26,7 +26,7 @@ const PROTOCOLS = [
     description: "At the start of every date, both parties are required to capture a photo of the other person via the app. Our AI cross-references this with registered biometric data and location metadata to confirm the date is actually happening.",
     icon: <Camera className="text-[#A855F7]" size={32} />,
     color: "border-[#A855F7]",
-    image: "/images/face-match.png"
+    srcset: "https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/identity-protected-biometric-scan-woman-s-face/identity-protected-biometric-scan-woman-s-face.avif 1x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/identity-protected-biometric-scan-woman-s-face/identity-protected-biometric-scan-woman-s-face.webp 2x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/identity-protected-biometric-scan-woman-s-face/identity-protected-biometric-scan-woman-s-face.jpg 3x"
   },
   {
     title: "The 10-Minute Buffer",
@@ -34,7 +34,7 @@ const PROTOCOLS = [
     description: "We respect the unpredictability of city life but demand professional discipline. A 10-minute grace period is applied to all arrival times. After 10 minutes, the girl's security deposit is at risk, while the boy's hourly compensation remains protected.",
     icon: <Clock className="text-[#22C55E]" size={32} />,
     color: "border-[#22C55E]",
-    image: "/images/timer-graphic.png"
+    srcset: "https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/Na_Dec_38/Na_Dec_38.avif 1x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/Na_Dec_38/Na_Dec_38.webp 2x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/Na_Dec_38/Na_Dec_38.jpg 3x"
   },
   {
     title: "Market Regulation",
@@ -42,7 +42,7 @@ const PROTOCOLS = [
     description: "Fairness extends to pricing. Men set their own rates, but Veil enforces strict upper and lower limits based on regional data. This prevents predatory pricing and ensures the ecosystem remains accessible and professional.",
     icon: <Scale className="text-[#EAB308]" size={32} />,
     color: "border-[#EAB308]",
-    image: "/images/rate-graph.png"
+    srcset: "https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/businessman-analyzing-market-data/businessman-analyzing-market-data.avif 1x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/businessman-analyzing-market-data/businessman-analyzing-market-data.webp 2x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/businessman-analyzing-market-data/businessman-analyzing-market-data.jpg 3x"
   },
   {
     title: "Support Intervention",
@@ -50,7 +50,7 @@ const PROTOCOLS = [
     description: "If a date exceeds its scheduled hour without a face-match verification, our 20-minute safety window triggers. Our agents will attempt three direct calls. This is the final layer of human-verified security.",
     icon: <PhoneCall className="text-[#F97316]" size={32} />,
     color: "border-[#F97316]",
-    image: "/images/support-call.png"
+    srcset: "https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/woman-working-call-center-holding-pair-headphones/woman-working-call-center-holding-pair-headphones.avif 1x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/woman-working-call-center-holding-pair-headphones/woman-working-call-center-holding-pair-headphones.webp 2x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/woman-working-call-center-holding-pair-headphones/woman-working-call-center-holding-pair-headphones.jpg 3x"
   },
   {
     title: "Emergency Escalation",
@@ -58,7 +58,7 @@ const PROTOCOLS = [
     description: "Safety is our absolute priority. If three contact attempts are ignored during a safety window, local law enforcement is automatically dispatched to the last known GPS coordinates. We treat every unverified silence as a high-risk event.",
     icon: <Siren className="text-red-500" size={32} />,
     color: "border-red-500",
-    image: "/images/police-dispatch.png"
+    srcset: "https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/futuristic-technology-concept/futuristic-technology-concept.avif 1x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/futuristic-technology-concept/futuristic-technology-concept.webp 2x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/futuristic-technology-concept/futuristic-technology-concept.jpg 3x"
   }
 ];
 
@@ -66,14 +66,14 @@ export default function SafetyFairnessPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white pt-32 pb-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* HEADER SECTION */}
         <div className="text-center space-y-6 mb-28">
           <h1 className="text-6xl md:text-9xl font-black uppercase italic tracking-tighter leading-[0.8]">
             Safety <br /> & <span className="text-white/20">Fairness</span>
           </h1>
           <p className="text-neutral-500 max-w-2xl mx-auto font-bold uppercase text-[10px] tracking-[0.2em] leading-loose">
-            Veil is a zero-trust platform. We replace empty promises with hard-coded protocols. 
+            Veil is a zero-trust platform. We replace empty promises with hard-coded protocols.
             Review the operational standards that protect your time and your life.
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function SafetyFairnessPage() {
                           ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12 lg:grid-flow-col-dense'}`}
             >
               {/* CONTENT (TEXT) */}
-              <div 
+              <div
                 className={`order-2 lg:order-none space-y-6 p-6 md:p-8 rounded-3xl z-10 
                             ${index % 2 === 0 ? 'lg:col-start-1 lg:pr-16' : 'lg:col-start-2 lg:pl-16'}`}
               >
@@ -112,17 +112,17 @@ export default function SafetyFairnessPage() {
               {/* ACTUAL IMAGE ASSET */}
               <div className={`order-1 lg:order-none relative overflow-hidden rounded-2xl border border-white/5 group
                           ${index % 2 === 0 ? 'lg:col-start-2' : 'lg:col-start-1'}`}>
-                
-                <img 
-                  src={protocol.image} 
-                  alt={protocol.title} 
+
+                <img
+                  srcSet={protocol.srcset}
+                  alt={protocol.title}
                   className="w-full h-[350px] lg:h-[500px] object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                 />
 
                 {/* Tactical Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
                 <div className={`absolute inset-0 border-2 rounded-2xl opacity-20 transition-opacity group-hover:opacity-40 ${protocol.color ? protocol.color : 'border-[#7B3FE4]'}`} />
-                
+
                 {/* Corner Accents */}
                 <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-white/20" />
                 <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-white/20" />
@@ -132,7 +132,7 @@ export default function SafetyFairnessPage() {
         </div>
 
         {/* BOTTOM PHILOSOPHY CALLOUT */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -146,9 +146,9 @@ export default function SafetyFairnessPage() {
               Apps that ignore the physical reality of dating fail their users. Veil operates on the principle that true safety comes from structure, and true fairness comes from financial accountability. We don't just facilitate meetings; we enforce commitments.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-                <Badge label="End-to-End Encryption" />
-                <Badge label="24/7 Security Dispatch" />
-                <Badge label="Automated Payouts" />
+              <Badge label="End-to-End Encryption" />
+              <Badge label="24/7 Security Dispatch" />
+              <Badge label="Automated Payouts" />
             </div>
           </div>
         </motion.div>
