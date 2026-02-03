@@ -98,7 +98,7 @@ export default function DownloadPage() {
               {/* HEADER AREA */}
               <div className="p-6 pt-16 flex justify-between items-center">
                 <div className="space-y-0.5">
-                  <h2 className="text-xl font-black italic text-black uppercase tracking-tighter leading-none">Veil App</h2>
+                  <h2 className="text-xl font-black italic text-black uppercase tracking-tighter leading-none">Befrent App</h2>
                 </div>
                 <div className="w-10 h-10 rounded-2xl bg-neutral-100 flex items-center justify-center border border-neutral-200 shadow-sm">
                   <Lock size={16} className="text-neutral-400" />

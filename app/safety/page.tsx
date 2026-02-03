@@ -39,7 +39,7 @@ const PROTOCOLS = [
   {
     title: "Market Regulation",
     subtitle: "Hourly Rate Caps",
-    description: "Fairness extends to pricing. Men set their own rates, but Veil enforces strict upper and lower limits based on regional data. This prevents predatory pricing and ensures the ecosystem remains accessible and professional.",
+    description: "Fairness extends to pricing. Men set their own rates, but Befrent enforces strict upper and lower limits based on regional data. This prevents predatory pricing and ensures the ecosystem remains accessible and professional.",
     icon: <Scale className="text-[#EAB308]" size={32} />,
     color: "border-[#EAB308]",
     srcset: "https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/businessman-analyzing-market-data/businessman-analyzing-market-data.avif 1x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/businessman-analyzing-market-data/businessman-analyzing-market-data.webp 2x, https://pub-936a2a79cb9b473fabc46e4ad35a3e2e.r2.dev/businessman-analyzing-market-data/businessman-analyzing-market-data.jpg 3x"
@@ -73,7 +73,7 @@ export default function SafetyFairnessPage() {
             Safety <br /> & <span className="text-white/20">Fairness</span>
           </h1>
           <p className="text-neutral-500 max-w-2xl mx-auto font-bold uppercase text-[10px] tracking-[0.2em] leading-loose">
-            Veil is a zero-trust platform. We replace empty promises with hard-coded protocols.
+            Befrent is a zero-trust platform. We replace empty promises with hard-coded protocols.
             Review the operational standards that protect your time and your life.
           </p>
         </div>
@@ -141,9 +141,9 @@ export default function SafetyFairnessPage() {
         >
           <Lock className="absolute -left-10 -bottom-10 h-64 w-64 text-white/[0.02] -rotate-12" />
           <div className="relative z-10 space-y-8">
-            <h3 className="text-4xl font-black uppercase italic tracking-tighter">The Veil Philosophy</h3>
+            <h3 className="text-4xl font-black uppercase italic tracking-tighter">The Befrent Philosophy</h3>
             <p className="text-neutral-500 max-w-3xl mx-auto font-medium text-sm leading-loose">
-              Apps that ignore the physical reality of dating fail their users. Veil operates on the principle that true safety comes from structure, and true fairness comes from financial accountability. We don't just facilitate meetings; we enforce commitments.
+              Apps that ignore the physical reality of dating fail their users. Befrent operates on the principle that true safety comes from structure, and true fairness comes from financial accountability. We don't just facilitate meetings; we enforce commitments.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Badge label="End-to-End Encryption" />

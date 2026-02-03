@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { 
+import {
   ArrowRight,
   Info,
   CheckCircle2
@@ -36,7 +36,7 @@ const TERM_SECTIONS = [
   {
     id: "06",
     title: "Keeping the Community Safe",
-    content: "Veil is built on trust and action. Any form of harassment, faking your identity, or trying to bypass our safety checks results in a permanent ban. We’re here to create a secure space for real connections, and we take that responsibility seriously."
+    content: "Befrent is built on trust and action. Any form of harassment, faking your identity, or trying to bypass our safety checks results in a permanent ban. We’re here to create a secure space for real connections, and we take that responsibility seriously."
   }
 ];
 
@@ -44,10 +44,10 @@ export default function TermsPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white pt-32 pb-20 px-6 font-sans">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* HEADER SECTION */}
         <div className="space-y-8 mb-20 pb-12">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
@@ -62,7 +62,7 @@ export default function TermsPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          
+
           {/* STICKY SIDEBAR */}
           <aside className="lg:col-span-4 lg:sticky lg:top-32 space-y-6">
             <div className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 space-y-6">
@@ -83,12 +83,12 @@ export default function TermsPage() {
 
           {/* MAIN CONTENT AREA */}
           <div className="lg:col-span-8 space-y-24">
-            
+
             {/* CONTENT SECTIONS */}
             <div className="space-y-20">
               {TERM_SECTIONS.map((section) => (
-                <motion.section 
-                  key={section.id} 
+                <motion.section
+                  key={section.id}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
@@ -109,24 +109,24 @@ export default function TermsPage() {
           </div>
         </div>
         <div className="pt-16">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#7B3FE4]/10 to-transparent border border-[#7B3FE4]/20 space-y-8"
-              >
-                <div className="space-y-2">
-                  <h3 className="text-3xl font-black uppercase italic tracking-tighter">Ready for actual accountability?</h3>
-                  <p className="text-neutral-500 text-xs font-bold uppercase tracking-widest leading-relaxed">
-                    By joining Veil, you agree to these ground rules. No ghosting. No wasted time. Just real dates.
-                  </p>
-                </div>
-                
-                <button className="group flex items-center gap-4 px-10 py-5 bg-white text-black font-black uppercase italic tracking-tighter rounded-2xl hover:bg-[#7B3FE4] hover:text-white transition-all duration-300 shadow-2xl shadow-[#7B3FE4]/20">
-                  Enter the Network 
-                  <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
-                </button>
-              </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="p-10 rounded-[2.5rem] bg-gradient-to-br from-[#7B3FE4]/10 to-transparent border border-[#7B3FE4]/20 space-y-8"
+          >
+            <div className="space-y-2">
+              <h3 className="text-3xl font-black uppercase italic tracking-tighter">Ready for actual accountability?</h3>
+              <p className="text-neutral-500 text-xs font-bold uppercase tracking-widest leading-relaxed">
+                By joining Befrent, you agree to these ground rules. No ghosting. No wasted time. Just real dates.
+              </p>
             </div>
+
+            <button className="group flex items-center gap-4 px-10 py-5 bg-white text-black font-black uppercase italic tracking-tighter rounded-2xl hover:bg-[#7B3FE4] hover:text-white transition-all duration-300 shadow-2xl shadow-[#7B3FE4]/20">
+              Enter the Network
+              <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+            </button>
+          </motion.div>
+        </div>
       </div>
     </main>
   );

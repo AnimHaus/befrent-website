@@ -10,10 +10,10 @@ import { faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const footerVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { staggerChildren: 0.1, delayChildren: 0.2 } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 }
   }
 };
 
@@ -27,11 +27,11 @@ export default function Footer() {
     <footer className="relative bg-[#050505] text-neutral-400 overflow-hidden border-t border-white/5">
       {/* BACKGROUND WATERMARK */}
       <div className="absolute -bottom-10 -left-10 text-[18vw] font-black text-white/[0.02] select-none leading-none pointer-events-none italic uppercase">
-        VEIL
+        BEFRENT
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-20">
-        <motion.div 
+        <motion.div
           variants={footerVariants}
           initial="hidden"
           whileInView="visible"
@@ -44,7 +44,7 @@ export default function Footer() {
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#7B3FE4] shadow-[0_0_20px_rgba(123,63,228,0.4)] rotate-3">
                 <Heart className="h-6 w-6 text-white fill-white" />
               </div>
-              <span className="text-3xl font-black italic uppercase tracking-tighter">Veil</span>
+              <span className="text-3xl font-black italic uppercase tracking-tighter">Befrent</span>
             </motion.div>
 
             <motion.p variants={itemVariants} className="text-lg text-neutral-500 max-w-sm font-medium leading-relaxed">
@@ -54,8 +54,8 @@ export default function Footer() {
 
             {/* UPDATED SOCIALS: Removed TikTok, Swapped Twitter for X */}
             <motion.div variants={itemVariants} className="flex gap-4">
-               <SocialLink icon={faInstagram} href="#" color="#E4405F" />
-               <SocialLink icon={faXTwitter} href="#" color="#ffffff" />
+              <SocialLink icon={faInstagram} href="#" color="#E4405F" />
+              <SocialLink icon={faXTwitter} href="#" color="#ffffff" />
             </motion.div>
           </div>
 
@@ -80,7 +80,7 @@ export default function Footer() {
         </motion.div>
 
         {/* BOTTOM LEGAL BAR */}
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
@@ -95,7 +95,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4 text-[10px] font-bold tracking-widest text-neutral-600 uppercase">
-              © {new Date().getFullYear()} Veil / All Rights Reserved
+            © {new Date().getFullYear()} Befrent / All Rights Reserved
           </div>
         </motion.div>
       </div>
@@ -137,7 +137,7 @@ function SocialLink({
 
 function TrustBadge({ icon, title, text }: { icon: React.ReactNode, title: string, text: string }) {
   return (
-    <motion.div 
+    <motion.div
       whileHover={{ backgroundColor: "rgba(255,255,255,0.05)", x: 5 }}
       className="p-4 rounded-2xl border border-white/5 bg-white/[0.02] flex items-center gap-4 transition-all group"
     >

@@ -2,13 +2,13 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Plus, 
-  Minus, 
-  ShieldAlert, 
-  Clock, 
-  Wallet, 
-  Camera, 
+import {
+  Plus,
+  Minus,
+  ShieldAlert,
+  Clock,
+  Wallet,
+  Camera,
   UserCheck,
   MapPin,
   PhoneCall,
@@ -40,7 +40,7 @@ const FAQ_DATA = [
       },
       {
         q: "Why is there no messaging feature?",
-        a: "Veil is a commitment-first platform. We eliminate the 'chat phase' to prevent ghosting and wasted time. By removing digital fillers, we ensure that every 'Like' is a commitment to a physical date.",
+        a: "Befrent is a commitment-first platform. We eliminate the 'chat phase' to prevent ghosting and wasted time. By removing digital fillers, we ensure that every 'Like' is a commitment to a physical date.",
         icon: <ShieldAlert size={20} />
       }
     ]
@@ -80,7 +80,7 @@ const FAQ_DATA = [
     questions: [
       {
         q: "How is the date's occurrence verified?",
-        a: "Upon meeting, both parties must take a photograph of the other person via the Veil app. Our system utilizes facial recognition and metadata to confirm identity, location, and time. This is a mandatory security step.",
+        a: "Upon meeting, both parties must take a photograph of the other person via the Befrent app. Our system utilizes facial recognition and metadata to confirm identity, location, and time. This is a mandatory security step.",
         icon: <Camera size={20} />
       },
       {
@@ -98,9 +98,9 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white pt-32 pb-20 px-6 font-sans">
       <div className="max-w-4xl mx-auto space-y-20">
-        
+
         {/* HEADER */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="space-y-6"
@@ -113,12 +113,12 @@ export default function FAQPage() {
             Frequently <br /><span className="text-white/20">Asked Questions</span>
           </h1>
           <p className="text-neutral-500 max-w-lg font-bold uppercase text-xs tracking-widest leading-relaxed">
-            Review our strict operational guidelines and safety standards. Veil is a zero-tolerance platform built for physical security and financial fairness.
+            Review our strict operational guidelines and safety standards. Befrent is a zero-tolerance platform built for physical security and financial fairness.
           </p>
         </motion.div>
 
         {/* FAQ GRID */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -129,21 +129,20 @@ export default function FAQPage() {
               <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-neutral-600 flex items-center gap-4">
                 {section.category} <div className="h-px flex-1 bg-white/5" />
               </h2>
-              
+
               <div className="grid gap-4">
                 {section.questions.map((item, qIdx) => {
                   const id = `${section.category}-${qIdx}`;
                   const isOpen = openIndex === id;
-                  
+
                   return (
-                    <motion.div 
+                    <motion.div
                       key={id}
                       variants={itemVariants}
-                      className={`group rounded-2xl border transition-all duration-500 ${
-                        isOpen ? 'bg-white/5 border-white/20 shadow-2xl' : 'bg-transparent border-white/5 hover:border-white/10'
-                      }`}
+                      className={`group rounded-2xl border transition-all duration-500 ${isOpen ? 'bg-white/5 border-white/20 shadow-2xl' : 'bg-transparent border-white/5 hover:border-white/10'
+                        }`}
                     >
-                      <button 
+                      <button
                         onClick={() => setOpenIndex(isOpen ? null : id)}
                         className="w-full flex items-center justify-between p-6 text-left"
                       >
@@ -181,26 +180,26 @@ export default function FAQPage() {
         </motion.div>
 
         {/* POLICE DISPATCH WARNING */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="p-10 rounded-[2rem] bg-red-950/20 border border-red-500/20 space-y-6 relative overflow-hidden"
         >
-           <Siren className="absolute -right-4 -bottom-4 h-32 w-32 text-red-500/10 rotate-12" />
-           <div className="flex items-center gap-4 text-red-500">
-             <ShieldAlert size={24} />
-             <h3 className="text-xl font-black uppercase italic tracking-tighter">Zero Tolerance Safety</h3>
-           </div>
-           <p className="text-neutral-400 font-medium text-sm leading-relaxed max-w-xl">
+          <Siren className="absolute -right-4 -bottom-4 h-32 w-32 text-red-500/10 rotate-12" />
+          <div className="flex items-center gap-4 text-red-500">
+            <ShieldAlert size={24} />
+            <h3 className="text-xl font-black uppercase italic tracking-tighter">Zero Tolerance Safety</h3>
+          </div>
+          <p className="text-neutral-400 font-medium text-sm leading-relaxed max-w-xl">
             If you do not respond to our safety calls after 20 minutes of an unverified date end-time, police will be dispatched to your last known GPS coordinates. We do not play with your safety.
-           </p>
+          </p>
         </motion.div>
 
         {/* FOOTER ACTION */}
         <div className="text-center pt-10">
-           <button className="group flex items-center gap-4 mx-auto text-sm font-black uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition-colors">
-             Still confused? Talk to support <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-           </button>
+          <button className="group flex items-center gap-4 mx-auto text-sm font-black uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition-colors">
+            Still confused? Talk to support <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
+          </button>
         </div>
       </div>
     </main>
